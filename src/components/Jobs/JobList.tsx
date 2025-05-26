@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { useApp } from '../../contexts/AppContext';
 import { useAuth } from '../../contexts/AuthContext';
@@ -59,7 +58,7 @@ const JobList = () => {
     return new Date(scheduledDate) < new Date();
   };
 
-  const handleStatusChange = (jobId: string, newStatus: string) => {
+  const handleStatusChange = (jobId: string, newStatus: 'Open' | 'In Progress' | 'Completed' | 'Cancelled') => {
     updateJob(jobId, { status: newStatus });
   };
 
@@ -178,7 +177,7 @@ const JobList = () => {
                     {canUpdateStatus && job.status !== 'Completed' && (
                       <Select
                         value={job.status}
-                        onValueChange={(value) => handleStatusChange(job.id, value)}
+                        onValueChange={(value: 'Open' | 'In Progress' | 'Completed' | 'Cancelled') => handleStatusChange(job.id, value)}
                       >
                         <SelectTrigger className="w-32">
                           <SelectValue />
