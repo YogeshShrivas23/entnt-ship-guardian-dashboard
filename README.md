@@ -1,73 +1,140 @@
-# Welcome to your Lovable project
+# 🚢 Ship Maintenance Dashboard – ENTNT Technical Assignment
 
-## Project info
+This is a **frontend-only Ship Maintenance Dashboard** developed as part of ENTNT's Frontend Developer assignment. The application enables Admins, Inspectors, and Engineers to manage ships, their components, and associated maintenance jobs, using only React and `localStorage`—no backend or external APIs.
 
-**URL**: https://lovable.dev/projects/26dca47c-ff36-48f5-9cde-e2cc1ec33f60
+> ✅ **Live Application:** [https://entnt-ship-guardian-dashboard.vercel.app/](https://entnt-ship-guardian-dashboard.vercel.app/)
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 📦 Tech Stack
 
-**Use Lovable**
+- **Framework:** React (Functional Components)
+- **Routing:** React Router
+- **State Management:** Context API
+- **Styling:** TailwindCSS / Material UI / Custom CSS (as used)
+- **Persistence:** `localStorage`
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/26dca47c-ff36-48f5-9cde-e2cc1ec33f60) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🔐 User Roles
 
-**Use your preferred IDE**
+| Role       | Email                | Password     |
+|------------|----------------------|--------------|
+| Admin      | `admin@entnt.in`     | `admin123`   |
+| Inspector  | `inspector@entnt.in` | `inspect123` |
+| Engineer   | `engineer@entnt.in`  | `engine123`  |
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+---
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🧩 Features Overview
 
-Follow these steps:
+### ✅ Authentication
+- Simulated login system with role-based access
+- Session persistence using `localStorage`
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+### 🚢 Ships Management
+- Add, edit, view, and delete ships
+- Detailed ship profile with general info, maintenance history, and components list
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+### 🧱 Components Management
+- Link components to ships
+- Edit, delete, and view component details
 
-# Step 3: Install the necessary dependencies.
-npm i
+### 🔧 Maintenance Jobs
+- Create jobs with type, priority, and assigned engineer
+- Filter jobs by ship, status, and priority
+- Track job progress (status updates)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
+### 📅 Maintenance Calendar
+- Monthly and weekly calendar view of scheduled jobs
+- Click a date to view jobs scheduled on that day
+
+### 🔔 Notification Center
+- In-app notifications for job creation, updates, and completion
+- Dismissible notifications
+
+### 📊 KPIs Dashboard
+- Overview cards with key metrics:
+  - Total Ships
+  - Overdue Maintenance
+  - Jobs In Progress
+  - Completed Jobs
+
+### 📱 Responsive Design
+- Fully responsive on mobile, tablet, and desktop devices
+
+---
+
+## 🗂️ Project Structure
+
+```
+src/
+├── components/
+│   ├── Authentication/
+│   ├── Dashboard/
+│   ├── Ships/
+│   ├── Components/
+│   ├── Jobs/
+│   ├── Notifications/
+├── contexts/
+├── pages/
+├── utils/
+├── styles/
+├── App.jsx
+└── index.js
 ```
 
-**Edit a file directly in GitHub**
+---
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+## ⚙️ Setup & Installation
 
-**Use GitHub Codespaces**
+To run this project locally:
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+```bash
+git clone https://github.com/yourusername/ship-maintenance-dashboard.git
+cd ship-maintenance-dashboard
+npm install
+npm start
+```
 
-## What technologies are used for this project?
+Then, open [http://localhost:3000](http://localhost:3000) in your browser.
 
-This project is built with:
+---
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+## ⚠️ Known Limitations
 
-## How can I deploy this project?
+- No backend integration (as per assignment guidelines)
+- All data is stored in `localStorage`; clearing it will reset the app
+- Roles are hardcoded, with no dynamic role creation or editing
 
-Simply open [Lovable](https://lovable.dev/projects/26dca47c-ff36-48f5-9cde-e2cc1ec33f60) and click on Share -> Publish.
+---
 
-## Can I connect a custom domain to my Lovable project?
+## 💡 Technical Decisions
 
-Yes, you can!
+- Used **React Functional Components** and **Hooks** for clean structure
+- Employed **Context API** for global state management
+- Designed UI with **TailwindCSS/Material UI** for fast development and responsiveness
+- Implemented **React Router** for intuitive multi-page navigation
+- Added **form validation** for improved UX
+- Used **modular folder structure** for scalability and clarity
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+## 🎯 Bonus Enhancements
+
+- [x] Fully responsive layout
+- [x] Notification center
+- [x] Calendar integration
+- [ ] Dark mode (can be added as future enhancement)
+
+---
+
+## 📧 Contact
+
+**Name:** Yogesh Shrivas  
+**Email:** yogeshshrivas7566@gmail.com  
+**Live Link:** [entnt-ship-guardian-dashboard.vercel.app](https://entnt-ship-guardian-dashboard.vercel.app)
+
+---
+
+> 🛠️ This project was developed as part of the ENTNT Frontend Developer Task. No external APIs or backend logic were used. All data interactions are handled entirely on the frontend using `localStorage`.
