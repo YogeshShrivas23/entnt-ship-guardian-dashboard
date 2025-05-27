@@ -1,22 +1,24 @@
-# 🚢 Ship Maintenance Dashboard – ENTNT Technical Assignment
+# 🚢 Ship Maintenance Dashboard – ENTNT Frontend Developer Assignment
 
-This is a **frontend-only Ship Maintenance Dashboard** developed as part of ENTNT's Frontend Developer assignment. The application enables Admins, Inspectors, and Engineers to manage ships, their components, and associated maintenance jobs, using only React and `localStorage`—no backend or external APIs.
+Welcome! This is a **fully frontend React application** built as part of the technical task for ENTNT’s Frontend Developer role. It simulates an internal system for managing ships, their components, and associated maintenance jobs — all without any backend. The app uses `localStorage` to persist data and includes role-based access for different user types.
 
-> ✅ **Live Application:** [https://entnt-ship-guardian-dashboard.vercel.app/](https://entnt-ship-guardian-dashboard.vercel.app/)
-
----
-
-## 📦 Tech Stack
-
-- **Framework:** React (Functional Components)
-- **Routing:** React Router
-- **State Management:** Context API
-- **Styling:** TailwindCSS / Material UI / Custom CSS (as used)
-- **Persistence:** `localStorage`
+> 🔗 **Live Demo:** [https://entnt-ship-guardian-dashboard.vercel.app/](https://entnt-ship-guardian-dashboard.vercel.app/)
 
 ---
 
-## 🔐 User Roles
+## ⚙️ Tech Stack
+
+- **React** with functional components and hooks  
+- **React Router** for navigation  
+- **Context API** for global state management  
+- **TailwindCSS / Material UI** for styling  
+- **localStorage** for simulating backend data persistence  
+
+---
+
+## 👥 User Roles
+
+The app includes three hardcoded user roles, each with different permissions:
 
 | Role       | Email                | Password     |
 |------------|----------------------|--------------|
@@ -26,67 +28,67 @@ This is a **frontend-only Ship Maintenance Dashboard** developed as part of ENTN
 
 ---
 
-## 🧩 Features Overview
+## 🌟 Key Features
 
-### ✅ Authentication
-- Simulated login system with role-based access
-- Session persistence using `localStorage`
+### 🔐 Simulated Authentication
+- Role-based login system
+- Sessions persist using `localStorage`
 
-### 🚢 Ships Management
-- Add, edit, view, and delete ships
-- Detailed ship profile with general info, maintenance history, and components list
+### 🚢 Ship Management
+- Add, edit, delete, and view detailed info of ships
+- View ship profiles with components and maintenance history
 
-### 🧱 Components Management
-- Link components to ships
-- Edit, delete, and view component details
+### ⚙️ Component Management
+- Add/edit/delete components linked to ships
+- Track installation and last maintenance dates
 
-### 🔧 Maintenance Jobs
+### 🧰 Maintenance Jobs
 - Create jobs with type, priority, and assigned engineer
-- Filter jobs by ship, status, and priority
-- Track job progress (status updates)
+- Filter by ship, status, or priority
+- Update job status from open → in progress → completed
 
-### 📅 Maintenance Calendar
-- Monthly and weekly calendar view of scheduled jobs
-- Click a date to view jobs scheduled on that day
+### 📅 Calendar View
+- Interactive monthly/weekly view of scheduled jobs
+- Clicking a date shows jobs for that day
 
 ### 🔔 Notification Center
-- In-app notifications for job creation, updates, and completion
-- Dismissible notifications
+- Real-time in-app notifications for job events
+- Dismissible for cleaner UX
 
-### 📊 KPIs Dashboard
-- Overview cards with key metrics:
+### 📊 Dashboard KPIs
+- Visual overview of:
   - Total Ships
   - Overdue Maintenance
-  - Jobs In Progress
+  - Jobs in Progress
   - Completed Jobs
 
-### 📱 Responsive Design
-- Fully responsive on mobile, tablet, and desktop devices
+### 📱 Fully Responsive
+- Optimized for desktop, tablet, and mobile screens
 
 ---
 
-## 🗂️ Project Structure
+## 🧩 Project Structure
 
 ```
 src/
-├── components/
+├── components/         # Reusable UI components
 │   ├── Authentication/
 │   ├── Dashboard/
 │   ├── Ships/
 │   ├── Components/
 │   ├── Jobs/
 │   ├── Notifications/
-├── contexts/
-├── pages/
-├── utils/
-├── styles/
-├── App.jsx
-└── index.js
+├── contexts/           # Context Providers for global state
+├── pages/              # Page-level views
+├── utils/              # Utility functions (localStorage, roles, etc.)
+├── styles/             # Global styles
+├── App.jsx             # Main app file
+└── index.js            # Entry point
 ```
 
 ---
 
-## ⚙️ Setup & Installation
+## 🚀 Getting Started
 
 To run this project locally:
 
@@ -97,44 +99,45 @@ npm install
 npm start
 ```
 
-Then, open [http://localhost:3000](http://localhost:3000) in your browser.
+Visit [http://localhost:3000](http://localhost:3000) in your browser to view the app.
 
 ---
 
 ## ⚠️ Known Limitations
 
-- No backend integration (as per assignment guidelines)
-- All data is stored in `localStorage`; clearing it will reset the app
-- Roles are hardcoded, with no dynamic role creation or editing
+- No backend or API – all data is stored in `localStorage`
+- If browser storage is cleared, data will be lost
+- Roles are hardcoded; no role management UI included
 
 ---
 
-## 💡 Technical Decisions
+## 💡 Why I Built It This Way
 
-- Used **React Functional Components** and **Hooks** for clean structure
-- Employed **Context API** for global state management
-- Designed UI with **TailwindCSS/Material UI** for fast development and responsiveness
-- Implemented **React Router** for intuitive multi-page navigation
-- Added **form validation** for improved UX
-- Used **modular folder structure** for scalability and clarity
-
----
-
-## 🎯 Bonus Enhancements
-
-- [x] Fully responsive layout
-- [x] Notification center
-- [x] Calendar integration
-- [ ] Dark mode (can be added as future enhancement)
+- **React + Hooks:** For modern, clean component structure
+- **Context API:** Simpler global state sharing
+- **TailwindCSS:** For rapid styling and consistent UI
+- **LocalStorage:** As a backend replacement (per assignment rules)
+- **Form validation:** To ensure clean user input and feedback
+- **Modular Structure:** For scalability and easy code maintenance
 
 ---
 
-## 📧 Contact
+## 🌈 Bonus Features
+
+- [x] Responsive calendar with job scheduling
+- [x] In-app notifications for job events
+- [x] KPI dashboard with stats
+- [ ] Dark mode (planned for future enhancement)
+
+---
+
+## 📬 Contact
 
 **Name:** Yogesh Shrivas  
 **Email:** yogeshshrivas7566@gmail.com  
-**Live Link:** [entnt-ship-guardian-dashboard.vercel.app](https://entnt-ship-guardian-dashboard.vercel.app)
+**Live Demo:** [entnt-ship-guardian-dashboard.vercel.app](https://entnt-ship-guardian-dashboard.vercel.app)
 
 ---
 
-> 🛠️ This project was developed as part of the ENTNT Frontend Developer Task. No external APIs or backend logic were used. All data interactions are handled entirely on the frontend using `localStorage`.
+> 🛠 This project was built as a part of the ENTNT Frontend Developer technical assignment. No external APIs or databases were used — all data handling is done on the frontend using `localStorage`.
+
